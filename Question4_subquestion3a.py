@@ -2,15 +2,25 @@ from random import randrange
 import time
 import matplotlib.pyplot as plt
 
+def sort_list(str):
+    list2 = str.split()
 
-def find_max(my_list):
-    max_so_far = my_list[0]
-    for i in my_list:
-        if i > max_so_far:
-            max_so_far = i
+    for i in range(0, len(list2)):
+        list2[i] = int(list2[i])
 
-    return max_so_far
+    list2.sort()
+    return list2
 
+
+print(sort_list(input("Enter a list of integers separated by space: ")))
+
+
+def sort_list(list2):
+    list2.sort()
+    return list2
+
+
+print(sort_list([1, 2, 5, 6, 3, 4]))
 
 size_array = []
 runtime_array = []
@@ -28,6 +38,9 @@ for list_size in range(1, 100, 20):
     runtime_array.append(runtime)
     print(f"List size: {list_size} --> Runtime: {runtime}")
 
+
+# print(size_array)
+# print(runtime_array)
 
 # plotting the points
 plt.plot(size_array, runtime_array)

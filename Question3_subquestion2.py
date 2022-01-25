@@ -7,4 +7,4 @@ def convert_to_lowercase(my_string):
     return return_string
 
 
-print(convert_to_lowercase(input("Enter a string: ")))
+print(convert_to_lowercase("Data Structure And Algorithms"))

@@ -1,9 +1,9 @@
 # Code to Measure time taken by program to execute.
-import time
+import timeit
 from pythonds import Stack
 
 # store starting time
-begin = time.time()
+begin = timeit.default_timer()
 
 
 # program body starts
@@ -25,7 +25,7 @@ print(revstring(mystring))
 # program body ends
 
 # store end time
-end = time.time()
+end = timeit.default_timer()
 
 # total time taken
 print(f"Total runtime of the program is {end - begin}")

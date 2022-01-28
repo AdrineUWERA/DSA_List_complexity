@@ -1,6 +1,7 @@
 import random
 import timeit
 import string
+import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -17,7 +18,7 @@ size_array = []
 runtime_array = []
 
 
-for string_size in range(1, 100, 20):
+for string_size in range(1, 100000, 20000):
     # printing uppercase
     letters = string.ascii_uppercase
     mystring = ''.join(random.choices(letters, k=string_size))
@@ -40,6 +41,26 @@ plt.ylabel('Time')
 
 # giving a title to my graph
 plt.title('Graph')
+
+x = np.array(size_array)
+y = np.array(runtime_array)
+
+# find line of best fit
+a, b = np.polyfit(x, y, 1)
+
+# add points to plot
+plt.scatter(x, y)
+
+# add line of best fit to plot
+plt.plot(x, a*x+b)
+
+print(f"\nGradient: {a}")
+# T(n) = a*x+b
+# drop the constant
+
+x = 1000000
+time_complexity = a * x
+print(f"Time complexity when input size = 1000000 is {time_complexity}")
 
 # function to show the plot
 plt.show()

@@ -7,7 +7,7 @@ begin = timeit.default_timer()
 
 
 # program body starts
-# sample program
+# sample program which reverses a string passed to it using a stack
 def revstring(mystr):
     returnString = ""
     s = Stack()

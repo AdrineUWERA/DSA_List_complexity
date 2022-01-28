@@ -58,7 +58,7 @@ C = runtime_eighty_one_input_size / (n1 * math.log(n1, 2))
 n = 1000000
 # finding the time value for the value(1000000) and displaying it
 time_complexity = C * n * math.log(n, 2)
-print(f"{time_complexity}")
+print(f"Runtime when input size = 1000000 is {time_complexity} seconds")
 
 # function to show the plot
 plt.show()

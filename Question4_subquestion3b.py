@@ -22,7 +22,7 @@ for list_size in range(1, 100, 20):
 # current process and interval which specify to measure the memory every 0.2 seconds and
 # timeout to stop measuring for one second to return the results
     mem_usage = memory_usage(-1, interval=.2, timeout=1)
-# adding the memory usage corresponding to the different sizes in an array and printing the memory used
+# adding the calculated memory usage corresponding to the different sizes in an array and printing the memory used
     memory_usage_array.append(mem_usage[-1])
     print(mem_usage)
 
